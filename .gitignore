@@ -1,0 +1,7 @@
+/py
+/.venv
+/.ipynb_checkpoints
+/*.mp3
+/*.pdf
+/test*
+

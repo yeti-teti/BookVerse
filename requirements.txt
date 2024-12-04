@@ -1,0 +1,12 @@
+pdfplumber
+transformers
+scikit-learn
+torch
+torchvision
+torchaudio
+sentencepiece
+bitsandbytes
+peft
+trl
+datasets
+numpy

@@ -1,0 +1,65 @@
+AI-Driven Audio Summaries for Books:
+Enhancing Accessibility and Engagement
+Introduction and Motivation
+There are millions of books out there, and choosing the right one can often feel
+overwhelming. For readers who want a quick way to decide if a book suits their taste,
+traditional text summaries are useful but limited. They often fail to capture the essence,
+tone, or style of a book, especially when it comes to specific genres like mystery, romance,
+or sci-fi. This problem is even more significant for people with visual impairments or
+reading difficulties, who rely on audio content for access. Current options don’t always
+provide summaries tailored to individual preferences or deliver them in a way that reflects
+the emotional nuances of a genre. To solve this, we’re developing an AI-driven system that
+generates concise audio summaries of books. These summaries will match the tone and
+style of the book’s genre, giving users a better sense of what the book feels like while
+making the content more accessible.
+Related Work
+The idea of summarizing books and generating audio content isn’t new, but recent
+advances in AI have opened new possibilities. Here’s a look at some existing methods and
+tools:
+1. Text Summarization: Models like BART and PEGASUS are widely used for creating
+summaries that are not just cut-and-paste versions of the text but rephrased to
+make them concise and easy to understand. These models have been used in news
+aggregation and document summarization, with promising results.
+2. Genre Classification: Traditional methods like support vector machines (SVMs) and
+Naïve Bayes classifiers have been around for a while. More recently, transformers
+like BERT and GPT have taken over, providing deeper understanding and better
+results when fine-tuned for specific tasks like genre detection.
+3. Voice Synthesis: Tools like Tacotron 2 and WaveNet have brought voice synthesis
+closer to human quality. They’re not just about clear pronunciation but also about
+capturing emotions and tone, making them ideal for creating engaging audio
+summaries.
+Our project builds on these advancements but adds a unique twist: tailoring both the
+summaries and the audio tone to match the genre of the book. This means a suspenseful
+thriller would sound tense and dramatic, while a romantic novel would feel warm and
+emotional.
+Dataset
+Genre Classification Dataset
+• Source: A dataset from Kaggle containing thousands of books categorized by genre.
+• Details: This dataset includes text excerpts and metadata like title and author,
+which will help train our genre classifier.
+• Preparation: We’ll clean the text to remove irrelevant data, tokenize it, and prepare
+it for feeding into the classification model.
+Summary Dataset
+• Source: Public datasets like those from Goodreads and Project Gutenberg, which
+provide summaries alongside full texts of books.
+• Details: These will be used to fine-tune the summarization model, ensuring it
+generates concise and meaningful summaries.
+Methodology
+Step 1: Predicting the Genre
+The first step is to determine the genre of the book:
+• Model: We’re starting with a NN model to classify genres like fiction, mystery, and
+sci-fi.
+• Training: We’ll split the Kaggle dataset into training and validation sets. Early trials
+with simple classifiers showed fairly good results.
+Step 2: Generating the Summary
+Once the genre is known, the system will summarize the book:
+• Text Extraction: We’ll use reliable tools to extract text from the uploaded PDF.
+• Summarization Model: PEGASUS, a leading abstractive summarization model, will
+generate summaries tailored to the genre.
+Step 3: Creating the Audio
+Finally, we’ll turn the summary into audio:
+• Voice Synthesis: Tacotron 2 will generate natural-sounding audio.
+• Tone Modulation: The system will adjust the voice’s pitch, speed, and intonation to
+match the emotional tone of the genre. For example, a mystery book might have a
+slower, suspenseful narration, while a fantasy novel might have a more upbeat,
+adventurous tone.
