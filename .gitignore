@@ -4,4 +4,7 @@
 /*.mp3
 /*.pdf
 /test*
+/Files
+/TTS.ipynb
+/tts_outputs
 

@@ -10,3 +10,7 @@ peft
 trl
 datasets
 numpy
+nltk
+deep-phonemizer
+scipy
+soundfile
